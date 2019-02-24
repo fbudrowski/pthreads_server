@@ -6,7 +6,7 @@ This project is a server together with clients built to demonstrate the use of *
 #### Description
 This project was an assignment for a Concurrent Programming course at the University of Warsaw.
 
-There are $k$ ($1 \leq k \leq 99$) types of resources and initially there are $n$ ($2 \leq n \leq 10000$) units per each type. Clients need a number of units (no more than $\lfloor n/2 \rfloor$) of the same resource. 
+There are k (1 <= k <= 99) types of resources and initially there are n (2 <= n <= 10000) units per each type. Clients need a number of units (no more than floor(n/2)) of the same resource. 
 
 Clients work in pairs of same-resource clients, i.e. they can get their resources assigned, or they can return their resources only together with another client, the same during execution. Clients are paired on-the-run by the server.
 
