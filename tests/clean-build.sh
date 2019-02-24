@@ -1,0 +1,2 @@
+rm klient
+rm serwer
