@@ -52,7 +52,6 @@ int main(int argv, char** argc){
     saction.sa_handler = onError;
 
     CALL(sigaction(SIGINT, &saction, NULL), onError());
-//    puts("XD1");
 
 
 
@@ -68,11 +67,9 @@ int main(int argv, char** argc){
     openDescriptor = -1;
     DEBUG("Wrote to main pipe (%d)\n", getpid());
     CALL(close(pipeDesc), onError());
-//    puts("Main pipe closed");
 
     pipeDesc = open(pipeName1, O_RDONLY);
     CALL(pipeDesc <= 2, onError());
-//    puts("OK2");
     openDescriptor = pipeDesc;
     int readBytes = -1;
     while((readBytes = (int) read(pipeDesc, buffer, 120)) == 0) continue;
@@ -86,9 +83,7 @@ int main(int argv, char** argc){
     acquired_resources((size_t) k, (size_t) n, (size_t) p, getpid(), (cli1 == getpid()) ? cli2 : cli1);
     openDescriptor = -1;
     CALL(close(pipeDesc), onError());
-//    puts("Closing ok");
     CALL(unlink(pipeName1), {unlink(pipeName2);exit(1);});
-//    puts("Unlink OK");
     DEBUG("Starting work (%d)\n", getpid());
 
     sleep((unsigned int) (p / 10 + p % 10));
