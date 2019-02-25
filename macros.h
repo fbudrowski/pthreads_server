@@ -17,7 +17,7 @@
 
 #define CALL(system, action) if ((system) != 0) {fprintf(stderr, "ERROR(%lu)\n", (long unsigned int)pthread_self()); action;exit(1);}
 #define SYS(system) if((system) != 0) {fprintf(stderr, "ERROR(%lu)\n", (long unsigned int)pthread_self); exit(1);}
-#define DEBUG(args...) //printf(args)
+#define DEBUG(args...) //printf(args) //If you want to use debug, uncomment printf.
 
 
 
