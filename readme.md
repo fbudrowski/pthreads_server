@@ -11,7 +11,7 @@ There are k (1 <= k <= 99) types of resources and initially there are n (2 <= n 
 
 Clients work in pairs of same-resource clients, i.e. they can get their resources assigned, or they can return their resources only together with another client, the same during execution. Clients are paired on-the-run by the server.
 
-Server can be stopped via an SIGINT (Ctrl + C) signal, in this case it ceases to accept any requests. When all previous requests have terminated (and all resources have been returned), it exits. The server can work for an arbitrary long amount of time and can serve any number of requests.
+Server can be stopped via an SIGINT (Ctrl + C) signal, in this case it ceases to accept any requests. When all previous requests have terminated (and all resources have been returned), it exits. The server can work for an arbitrary (reasonable) long amount of time and can serve any reasonable number of requests.
 #### How to run?
 Build instruction: `cmake ..; make serwer; make client`
 
